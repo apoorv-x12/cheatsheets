@@ -51,4 +51,17 @@ main, header, footer, nav, video, article, section etc
 ---placeholder attribute in text field:
 <input type="text" placeholder="this is placeholder text">
 
+---form :(input will have attribute like type etc here is just vague structure)
+<form action="/url-where-you-want-to-submit-form-data">
+  <input>
+</form>
+
+---Add a Submit Button to a Form
+<button type="submit">this button submits the form</button>
+or ... <input type="submit" value="shows on button">
+
+--- to make field of input compulsory augment required at end:
+<input type="text" required>
+
 ---
+
