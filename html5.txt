@@ -1,0 +1,54 @@
+---headings
+ <h1></h1> h1...6
+
+---paragraph
+<p>I'm a p tag!</p>
+
+---comment
+<!--dndjsjs-->
+
+---html 5 elements:
+main, header, footer, nav, video, article, section etc
+
+---IMAGES
+<img src="https://www.freecatphotoapp.com/your-image.jpg" alt="A business cat wearing a necktie.">
+
+---LInk external using a:
+<a href="https://www.freecodecamp.org">this links to freecodecamp.org</a>
+
+----Link internal section using a:
+<a href="#contacts-header">Contacts</a>
+...
+<h2 id="contacts-header">Contacts</h2>
+
+---Nest an Anchor Element within a Paragraph:
+<p>
+  Here's a <a target="_blank" href="https://www.freecodecamp.org"> link to www.freecodecamp.org</a> for you to follow.
+</p>
+
+---Making dead links using #
+<a target="_blank" href="#"> l</a>
+
+---turning image to link:
+<a href="#"><img src="https://www.bit.ly/fcc-running-cats" alt="Three kittens running towards the camera."></a>
+<!--above we gave a dead link but we can give any link-->
+
+---unordered list:
+<ul>
+  <li>milk</li>
+  <li>cheese</li>
+</ul>
+
+---ordered list:
+<ol>
+  <li>milk</li>
+  <li>cheese</li>
+</ol>
+
+--- text field (used in form generally although can be used outside of it):
+<input type="text">
+
+---placeholder attribute in text field:
+<input type="text" placeholder="this is placeholder text">
+
+---
