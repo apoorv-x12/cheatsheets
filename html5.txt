@@ -1,3 +1,16 @@
+THESE notes contain all material of Basic html and html5(Responsive Web Design course) by freecodecamp
+
+---basic structure:
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta>
+  </head>
+  <body>
+  </body>
+</html>
+
+
 ---headings
  <h1></h1> h1...6
 
@@ -63,5 +76,30 @@ or ... <input type="submit" value="shows on button">
 --- to make field of input compulsory augment required at end:
 <input type="text" required>
 
----
+---to add new input types like radio we nest it inside new label tag like:
+<label for="indoor"> 
+  <input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor 
+</label>
+
+---similarly for checkbox:
+<label for="loving"><input id="loving" type="checkbox" name="personality" value="loving"> Loving</label>
+
+--- use of name and value 
+<label for="indoor">
+  <input id="indoor" value="indoor" type="radio" name="indoor-outdoor">Indoor
+</label>
+<label for="outdoor">
+  <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
+</label>
+---in above Here, you have two radio inputs. When the user submits the form with the indoor option selected, the form data will include the line: indoor-outdoor=indoor. This is from the name and value attributes of the "indoor" input.
+
+---Check Radio Buttons and Checkboxes by Default:
+<input type="radio" name="test-name" checked>
+
+---Nest Many Elements within a Single div Element
+<div class="class1 class2">
+</div>
+
+
+
 
