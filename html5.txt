@@ -4,7 +4,7 @@ THESE notes contain all material of Basic html and html5(Responsive Web Design c
 <!DOCTYPE html>
 <html>
   <head>
-    <meta>
+    
   </head>
   <body>
   </body>
