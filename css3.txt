@@ -78,10 +78,15 @@ p {
 --We can round out those corners with a CSS property called border-radius.
 border-radius: 10px;
 
----Make Circular Images with a border-radiusPassed
+---Make Circular Images with a border-radius
 --In addition to pixels, you can also specify the border-radius using a percentage.
 --border-radius of 50% makes circular images.
 border-radius: 50%;
+
+---Give a Background Color to a div Element
+.green-background {
+  background-color: green;
+}
 
 
 
