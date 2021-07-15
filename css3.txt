@@ -23,7 +23,7 @@
  <h2 class="blue-text">CatPhotoApp</h2>
  <p class="blue-text">as</p>
  
----also we can apply more than 1 class to an element separated by spaces like this class="class1 class2" etc
+---NOTE: also we can apply more than 1 class to an element separated by spaces like this class="class1 class2" etc
 
 ---Change the Font Size of an Element
 h1 {
@@ -36,13 +36,55 @@ h2 {
 }
 
 ---Import a Google Font
-To import a Google Font, you can copy the font's URL from the Google Fonts library and then paste it in your HTML.
-we'll import the Lobster font
+--To import a Google Font, you can copy the font's URL from the Google Fonts library and then paste it in your HTML.
+--we'll import the Lobster font:
+
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-Now you can use the Lobster font in your CSS by using Lobster as the FAMILY_NAME as in the following example:
+
+--Now you can use the Lobster font in your CSS by using Lobster as the FAMILY_NAME as in the following example:
+
 font-family: FAMILY_NAME, GENERIC_NAME;
+
 --The GENERIC_NAME is optional, and is a fallback font in case the other specified font is not available
 --Family names are case-sensitive and need to be wrapped in quotes if there is a space in the name.
+
+---Specify How Fonts Should Degrade
+--There are several default fonts that are available in all browsers. These generic font families include monospace, serif and sans-serif.
+--For example, if you wanted an element to use the Helvetica font, but degrade to the sans-serif font when Helvetica isn't available, you will specify it as follows:
+
+p {
+  font-family: Helvetica, sans-serif;
+}
+--Generic font family names are not case-sensitive. Also, they do not need quotes because they are CSS keywords.
+
+---Size Your Images
+<style>
+  .larger-image {
+    width: 500px;
+  }
+</style>
+
+---Add Borders Around Your Elements
+--CSS borders have properties like style, color and width.
+<style>
+  .thin-red-border {
+    border-color: red;
+    border-width: 5px;
+    border-style: solid;
+  }
+</style>
+
+---Add Rounded Corners with border-radius
+--We can round out those corners with a CSS property called border-radius.
+border-radius: 10px;
+
+---Make Circular Images with a border-radiusPassed
+--In addition to pixels, you can also specify the border-radius using a percentage.
+--border-radius of 50% makes circular images.
+border-radius: 50%;
+
+
+
 
 
 
