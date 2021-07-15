@@ -1,1 +1,41 @@
 
+---Change the Color of Text (inline)
+<h2 style="color: blue;">CatPhotoApp</h2>
+
+---Use CSS Selectors to Style Elements
+<style>
+  h2 {
+    color: red;
+  }
+</style>
+
+---Use a CSS Class to Style an Element
+<style>
+  .blue-text {
+    color: blue;
+  }
+</style>
+--below is one of element in body with class "blue-text"
+<h2 class="blue-text">CatPhotoApp</h2>
+
+---Style Multiple Elements with a CSS Class
+ Classes allow you to use the same CSS styles on multiple HTML elements
+ <h2 class="blue-text">CatPhotoApp</h2>
+ <p class="blue-text">as</p>
+ 
+---also we can apply more than 1 class to an element separated by spaces like this class="class1 class2" etc
+
+---Change the Font Size of an Element
+h1 {
+  font-size: 30px;
+}
+
+---Set the Font Family of an Element
+h2 {
+  font-family: sans-serif;
+}
+
+
+
+
+
