@@ -99,6 +99,9 @@ or ... <input type="submit" value="shows on button">
 <div class="class1 class2">
 </div>
 
+---Span another empty element which is "inline" unlike div which is "block"
+<span></span>
+
 
 
 
