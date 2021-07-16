@@ -19,7 +19,7 @@
 <h2 class="blue-text">CatPhotoApp</h2>
 
 ---Style Multiple Elements with a CSS Class
- Classes allow you to use the same CSS styles on multiple HTML elements
+--Classes allow you to use the same CSS styles on multiple HTML elements
  <h2 class="blue-text">CatPhotoApp</h2>
  <p class="blue-text">as</p>
  
@@ -94,13 +94,25 @@ border-radius: 50%;
 
 <h2 id="cat-photo-app"></h2>
 
----Use an id Attribute to Style an Element
+---Use an id Attribute to Style any Element
 #cat-photo-element {
   background-color: green;
 }
 
----NOTE: preference order of styling  -> inline(as attribute of element tag) > id > class > element(like h2 etc)
+---NOTE: preference order of styling -> inline(as attribute of element tag) > id > class > element(like h2 etc)
 
+---NOTE: 1) all HTML elements are essentially little rectangles. 2) Three important properties control the space that surrounds each HTML element: padding, border, and margin.
+
+---Adjust the Padding of an Element
+--An element's padding controls the amount of space between the element's content and its border.
+.blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+  }
+  
+---Adjust the Margin of an Element
+--An element's margin controls the amount of space between an element's border and surrounding elements.
 
 
 
