@@ -87,7 +87,19 @@ border-radius: 50%;
 .green-background {
   background-color: green;
 }
+<div class="green-background"></div>
 
+---Set the id of an Element
+--id attributes should be unique. Browsers won't enforce this, but it is a widely agreed upon best practice
+
+<h2 id="cat-photo-app"></h2>
+
+---Use an id Attribute to Style an Element
+#cat-photo-element {
+  background-color: green;
+}
+
+---NOTE: preference order of styling  -> inline(as attribute of element tag) > id > class > element(like h2 etc)
 
 
 
