@@ -1,0 +1,42 @@
+Building Layouts Part 1 cRUX:
+
+---Vocabulary glossary link:
+https://developers.google.com/android/for-all/vocab-words/?hl=en
+
+---Basic Views used as xml elements for layout:
+TextView,Button,ImageView etc
+--Views are rectangles on screen that makes the app
+
+---XML visualizer link:
+https://labs.udacity.com/android-visualizer/#/android/text-view
+
+---xml is like html
+Syntax:
+
+<Element attributes="their values" />-->self closing
+
+or nested aka parent child:
+
+<Element attributes="their values" >
+<Element1 attributes="their values" />
+<Element1 attributes="their values" />
+.
+.
+</Element>
+--where Element,Element1 can be Button,TextView etc
+
+---example:
+<TextView
+    android:text="Happy Birthday"
+    android:background="@android:color/darker_gray"
+    android:layout_width="1500dp"
+    android:layout_height="75dp" />
+
+--dp means density independent pixels
+--android:text is Basically text similarly for other attributes
+
+---NOTE: as values of layout_width and layout_height we should use "wrap_content" instead of giving values like
+"12dp"
+
+
+
