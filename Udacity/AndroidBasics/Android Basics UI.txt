@@ -7,6 +7,9 @@ https://developers.google.com/android/for-all/vocab-words/?hl=en
 TextView,Button,ImageView etc
 --Views are rectangles on screen that makes the app
 
+---Common Views Cheatsheet:
+https://drive.google.com/file/d/0B5XIkMkayHgRMVljUVIyZzNmQUU/view?resourcekey=0-DxZQap7Q0QxMVQtIGhcgEQ
+
 ---XML visualizer link:
 https://labs.udacity.com/android-visualizer/#/android/text-view
 
