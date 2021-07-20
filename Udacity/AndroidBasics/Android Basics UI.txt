@@ -51,7 +51,23 @@ https://material.io/
 android:textAppearance="?android:attr/textAppearanceMedium"
 --in above string value we can have Medium/Large/Small
 
+---To change background color:
+change right side's string value to a code like #EEFF41
+
+android:background="@android:color/darker_gray" --> android:background="#EEFF41"
+
+--to get color code go to 2014 Material Design color pallette of below link:
+ https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+
+---To change text color add to TextView:
+
+  android:textColor="#EEFF41"
+
+--hex colors link:
+  https://www.w3schools.com/colors/colors_hex.asp
+
 ---
+
 
 
 
