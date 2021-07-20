@@ -38,5 +38,20 @@ or nested aka parent child:
 ---NOTE: as values of layout_width and layout_height we should use "wrap_content" instead of giving values like
 "12dp"
 
+---Material Design guidelines:
+https://material.io/
+
+--NOTE: for typography(recommended font size etc we can use above)
+
+---to change text size in TextView add this attribute:
+   android:textSize="50sp"
+--where sp is scale independent pixels
+
+---Use textAppearance attribute instead of textSize in TextView:
+android:textAppearance="?android:attr/textAppearanceMedium"
+--in above string value we can have Medium/Large/Small
+
+---
+
 
 
