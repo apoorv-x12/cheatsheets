@@ -1,1 +1,171 @@
 node js + express beginner notes
+-----
+Node.js Hello World
+Write a small hello world program with Node.js Your task for the lab is:
+
+Create a variable named helloWorld
+Write "Hello World" inside this variable
+
+ANS----- let helloWorld ="Hello World"
+-----------------------------------------------------------------
+
+CommonJS Module System Practice
+The CommonJS module specification is the standard used in Node.js for working with modules.
+
+The syntax to import a module is:
+const package = require('module-name')
+
+(NOTE: In CommonJS, modules are loaded synchronously, and processed in the order the JavaScript runtime finds them.
+This system was born with server-side JavaScript in mind, and is not suitable for the client-side (this is why ES Modules were introduced).)
+
+-Inside `script.js` create a function with name `multiplyNumbers`
+-Export this function under the name `myMultiplyNumberFunctionExport`
+-When imported and used, this function should multiply the two numbers passed as arguments
+
+ANS-------
+let multiplyNumbers=(a,b)=>{
+    return a*b
+}
+exports.myMultiplyNumberFunctionExport=multiplyNumbers
+---------------------------------------------------------------------------------------
+
+Raw HTTP Server
+In this lab, your task is to create a raw HTTP server (without using any express package or anything). Make sure you take care of the constraints passed in the challenges below.
+
+-You should start a server on port `process.env.PUBLIC_PORT`
+-The route `/` should return a status code of 418
+-The route `/` should have a text response of "YOLO"
+
+ANS------------
+const http = require('http')
+
+const server = http.createServer((req, res) => {
+    res.writeHead(418)
+    res.write("YOLO")
+    res.end()
+})
+
+server.listen(process.env.PUBLIC_PORT)
+--------------------------------------------------------------------------------
+
+Basic routing
+Routing refers to determining how an application responds to a client request to a particular endpoint,
+which is a URI (or path) and a specific HTTP request method (GET, POST, and so on).
+Each route can have one or more handler functions, which are executed when the route is matched.
+
+Route definition takes the following structure:
+
+app.METHOD(PATH, HANDLER)
+
+Where:
+app is an instance of express.
+METHOD is an HTTP request method, in lowercase.
+PATH is a path on the server.
+HANDLER is the function executed when the route is matched.
+The following examples illustrate defining simple routes.
+
+Respond with Hello World! on the homepage:
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
+
+Respond to POST request on the root route (/), the application’s home page:
+app.post('/', function (req, res) {
+  res.send('Got a POST request')
+})
+
+Respond to a PUT request to the /user route:
+app.put('/user', function (req, res) {
+  res.send('Got a PUT request at /user')
+})
+
+Respond to a DELETE request to the /user route:
+app.delete('/user', function (req, res) {
+  res.send('Got a DELETE request at /user')
+})
+
+-You should install express as a dependency (not a devDependency) and convert your code to express.js format
+-Hitting route `/` should return "hello world"
+-Hitting route `/what-is-my-method` with GET method should return 'GET' as the response
+-Hitting route `/what-is-my-method` with POST method should return 'POST' as the response
+-Hitting route `/what-is-my-method` with PUT method should return 'PUT' as the response
+-Hitting route `/what-is-my-method` with DELETE method should return 'DELETE' as the response
+-Hitting route `/what-is-my-method` with PATCH method should return 'PATCH' as the response
+
+ANS-----------
+
+Console-------
+node init -y
+node i express
+
+CODE-------
+const express = require('express')
+const app=express()
+
+app.get('/',(req,res)=>{
+    res.send('hello world')
+})
+app.get('/what-is-my-method',(req,res)=>{
+    res.send('GET')
+})
+app.post('/what-is-my-method',(req,res)=>{
+    res.send('POST')
+})
+app.put('/what-is-my-method',(req,res)=>{
+    res.send('PUT')
+})
+app.delete('/what-is-my-method',(req,res)=>{
+    res.send('DELETE')
+})
+app.patch('/what-is-my-method',(req,res)=>{
+    res.send('PATCH')
+})
+app.listen(process.env.PUBLIC_PORT)
+
+------------------------------------------------------------------------------------------------------
+
+Middlewares in Express
+
+1)Application-level middleware-----------
+
+This example shows a middleware function with no mount path. The function is executed every time the app receives a request.
+
+const express = require('express')
+const app = express()
+
+app.use(function (req, res, next) {
+  console.log('Time:', Date.now())
+  next()
+})
+
+This example shows a middleware function mounted on the /user/:id path. The function is executed for any type of HTTP request on the /user/:id path.
+
+app.use('/user/:id', function (req, res, next) {
+  console.log('Request Type:', req.method)
+  next()
+})
+
+2) Router-level middleware--------
+
+Router-level middleware works in the same way as application-level middleware, except it is bound to an instance of express.Router().
+
+const router = express.Router()
+
+Load router-level middleware by using the router.use() and router.METHOD() functions.
+
+The following example code replicates the middleware system that is shown above for application-level middleware, by using router-level middleware:
+
+const express = require('express')
+const app = express()
+const router = express.Router()
+
+// a middleware function with no mount path. This code is executed for every request to the router
+router.use(function (req, res, next) {
+  console.log('Time:', Date.now())
+  next()
+})
+
+
+
+
+
